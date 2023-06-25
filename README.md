@@ -1,2 +1,2 @@
-# Biblioteca
-Aplicacion para el manejo de una biblioteca
+# Library
+Application to manange a library
