@@ -1,5 +1,6 @@
 from django import forms
 
+#Book
 class CreateBookForm(forms.Form):
     isbn = forms.IntegerField()
     title = forms.CharField(max_length=20)
@@ -9,3 +10,21 @@ class CreateBookForm(forms.Form):
 
 class FindBookForm(forms.Form):
     title = forms.CharField(max_length=20, required=False)
+    
+#Client
+class CreateClientForm(forms.Form):
+    dni = forms.IntegerField()
+    lastname = forms.CharField(max_length=20)
+    firstname = forms.CharField(max_length=20, required=False)
+
+class FindClientForm(forms.Form):
+    lastname = forms.CharField(max_length=20, required=False)
+    
+#User
+class CreateUserForm(forms.Form):
+    userid = forms.IntegerField()
+    username = forms.CharField(max_length=20)
+    userpass = forms.CharField(max_length=20)
+
+class FindUserForm(forms.Form):
+    username = forms.CharField(max_length=20, required=False)

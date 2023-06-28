@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Clients</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Client List
+{% endblock h1_header %}
+
+{% block content %}
+<button>
+    <a class="navbar-brand" href={% url 'initial:client_create' %}>Create client</a>
+</button>
+
+<!--<p>{{msgLabel}}</p>-->
+
+<form action="" method="get">
+    {{formClient}}
+    <button>Find</button>
+</form>
+
+{%for client in listClient %}
+<li>LastName: {{client.lastname}} - FirstName: {{client.firstname}} - Dni: {{client.dni}}</li>
+{%endfor%}
+
+{% endblock content %}

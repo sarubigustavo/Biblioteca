@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Users</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+User List
+{% endblock h1_header %}
+
+{% block content %}
+<button>
+    <a class="navbar-brand" href={% url 'initial:user_create' %}>Create user</a>
+</button>
+
+<!--<p>{{msgLabel}}</p>-->
+
+<form action="" method="get">
+    {{formUser}}
+    <button>Find</button>
+</form>
+
+{%for user in listUser %}
+<li>UserName: {{user.username}} - UserPassword: {{user.userpass}} - UserId: {{user.userid}}</li>
+{%endfor%}
+
+{% endblock content %}
