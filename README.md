@@ -6,5 +6,5 @@ Application to manange a library
 #django app name: initial
 
 Sistema para el manejo de una biblioteca en su version mvp. 
-El model consta de tren entidades u objetos: Libro, Cliente, Usuario.
-La aplicacion permite crear regisytros de cada entidad de forma independiente.
+El model consta de tres entidades u objetos: Libro, Cliente, Usuario.
+La aplicacion permite crear registros de cada entidad de forma independiente.
