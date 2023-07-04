@@ -7924,6 +7924,7 @@ textarea.form-control-lg {
 
 .fs-4 {
   font-size: calc(1.275rem + 0.3vw) !important;
+  color: black
 }
 
 .fs-5 {
