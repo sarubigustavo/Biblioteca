@@ -22,11 +22,13 @@
     <body>
         <!-- Navigation Header -->
         <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32"><use xlink:href={% static "assets/img/header-ico.jpg" %} ></use></svg>
-                    <span class="fs-4">Library</span>
-                </a>
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                        <svg class="bi" width="40" height="32" role="img"><use xlink:href={% static "assets/img/header-ico.jpg" %}></use></svg>
+                        <span class="fs-4">Library</span>
+                    </a>
+                </div>
                 <!-- Navigation -->
                 {% block navigation_menu %}
                 <ul class="nav nav-pills">
@@ -37,6 +39,11 @@
                 <!-- <a class="navbar-brand" href={% url 'initial:book_create' %}>Create book</a> -->
                 <!-- <a class="btn btn-primary" href={% url 'initial:book_create' %}>Create book</a> -->
                 </ul>
+
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                    <button type="button" class="btn btn-primary">Sign-up</button>
+                </div>
                 {% endblock navigation_menu %}
             </header>
         </div>
