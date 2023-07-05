@@ -31,6 +31,7 @@
                 </div>
                 <!-- Navigation -->
                 {% block navigation_menu %}
+                <!--<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"> -->
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a href={% url 'initial:initial' %} class="nav-link active" aria-current="page">Initial</a></li>
                     <li class="nav-item"><a href={% url 'initial:book_list' %} class="nav-link" >Books</a></li>
@@ -42,7 +43,7 @@
 
                 <div class="col-md-3 text-end">
                     <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                    <button type="button" class="btn btn-primary">Sign-up</button>
+                    <button type="button" class="btn btn-outline-primary">Sign-up</button>
                 </div>
                 {% endblock navigation_menu %}
             </header>
