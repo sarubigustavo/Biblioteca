@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title_head %}
-<title>Books</title>
+<title>About</title>
 {% endblock title_head %}
 
 {% block navigation_menu %}
+<!-- <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"> -->
 <ul class="nav nav-pills">
     <li class="nav-item"><a href={% url 'initial:initial' %} class="nav-link">Initial</a></li>
-    <li class="nav-item"><a href={% url 'initial:book_list' %} class="nav-link active" aria-current="page" >Books</a></li>
+    <li class="nav-item"><a href={% url 'initial:book_list' %} class="nav-link">Books</a></li>
     <li class="nav-item"><a href={% url 'initial:client_list' %} class="nav-link">Clients</a></li>
     <li class="nav-item"><a href={% url 'initial:user_list' %} class="nav-link">Users</a></li>
 </ul>
@@ -20,23 +22,14 @@
 {% endblock navigation_menu %}
 
 {% block h1_header %}
-Book List
+About me
 {% endblock h1_header %}
 
 {% block content %}
-<button>
-    <a class="navbar-brand" href={% url 'initial:book_create' %}>Create book</a>
-</button>
-
-<!--<p>{{msgLabel}}</p>-->
-
-<form action="" method="get">
-    {{formBook}}
-    <button>Find</button>
-</form>
-
-{%for book in listBook %}
-<li>Title: {{book.title}} - Author: {{book.author}} - Isbn: {{book.isbn}} - Edition: {{book.edition}}</li>
-{%endfor%}
-
+<img src={% static "assets/img/GSARUBI_Light_Centered.jpg" %} class="img-thumbnail" alt="...">
+<p class="text-center text-wrap" style="width: 60rem;">
+    Mi nombre es Gustavo Sarubi, Lic en sistemas, y desarrollador de este sitio.  
+    Trabajo en sistemas hace 25 años siempre trabajando para conocidas multinacionales como: IBM, HP; EXXONMobil, JP Morgan, entre otras. 
+    Me pueden contactar en mi mail personal: sarubigustavo@gmail.com 
+</p>
 {% endblock content %}

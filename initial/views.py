@@ -8,6 +8,9 @@ from initial.models import Book, Client, User
 def initial(request):
     return render(request, 'initial/initial.html')
 
+def about(request):
+    return render(request, 'initial/about.html')
+
 #Book
 def createBook(request):
     #msgLabel = ''
