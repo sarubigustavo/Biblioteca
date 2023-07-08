@@ -26,10 +26,15 @@ About me
 {% endblock h1_header %}
 
 {% block content %}
-<img src={% static "assets/img/GSARUBI_Light_Centered.jpg" %} class="img-thumbnail" alt="...">
-<p class="text-center text-wrap" style="width: 60rem;">
+<div 
+style="display: flex; 
+align-content: center; width: 700px;
+height: 200px; margin: auto">
+<img src={% static "assets/img/GSARUBI_Light_Centered.jpg" %} class="img-thumbnail" alt="..." >
+<p class="text-center text-wrap" style="width: 40rem; padding:20px">
     Mi nombre es Gustavo Sarubi, Lic en sistemas, y desarrollador de este sitio.  
     Trabajo en sistemas hace 25 años siempre trabajando para conocidas multinacionales como: IBM, HP; EXXONMobil, JP Morgan, entre otras. 
     Me pueden contactar en mi mail personal: sarubigustavo@gmail.com 
 </p>
+</div>
 {% endblock content %}
