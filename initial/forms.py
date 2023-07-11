@@ -22,7 +22,7 @@ class FindClientForm(forms.Form):
     
 #User
 class CreateUserForm(forms.Form):
-    userid = forms.IntegerField()
+    fullname = forms.CharField(max_length=20)
     username = forms.CharField(max_length=20)
     userpass = forms.CharField(max_length=20)
 

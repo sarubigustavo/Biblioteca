@@ -72,7 +72,7 @@ def createUser(request):
         formUser = CreateUserForm(request.POST)
         if formUser.is_valid():
             infoUser = formUser.cleaned_data
-            user = User(userid=infoUser['userid'], username=infoUser['username'], userpass=infoUser['userpass'])
+            user = User(fullname=infoUser['fullname'], username=infoUser['username'], userpass=infoUser['userpass'])
             user.save()
             #msgLabel =  f'Book "{book.title}" has been created.'
             return redirect('initial:user_list')
