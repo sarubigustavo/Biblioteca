@@ -6,14 +6,16 @@ class Book(models.Model):
     title = models.CharField(max_length=20)
     author = models.CharField(max_length=20)
     edition = models.DateField(null=True)
+    #descripcion = ..RichField
     
 class Client(models.Model):
     dni = models.IntegerField()
     lastname = models.CharField(max_length=20)
     firstname = models.CharField(max_length=20, null=True)
+    #observaciones = ..RichField
     
 class User(models.Model):
-    userid = models.IntegerField()
+    fullname = models.CharField(max_length=20)
     username = models.CharField(max_length=20)
     userpass = models.CharField(max_length=20)
     
